@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faraón Digital Security | Elite IT Support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --gold: #FFB800;
+            --gold-light: #FFD966;
+            --dark-gold: #B8860B;
+            --black-bg: #050608;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 184, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--black-bg);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* NAVBAR CON EFECTO CRISTAL */
+        .navbar {
+            background: rgba(10, 12, 15, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 1.5rem;
+            box-shadow: 0 0 15px rgba(255, 184, 0, 0.3);
+        }
+
+        .logo-text h2 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .logo-text span {
+            color: var(--gold);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* HERO SECTION DINÁMICO */
+        .hero {
+            padding: 120px 0 80px;
+            background: radial-gradient(circle at top right, rgba(255, 184, 0, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(184, 134, 11, 0.05), transparent 40%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(to bottom, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* BOTONES MODERNOS */
+        .btn-gold {
+            background: var(--gold);
+            color: #000;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(255, 184, 0, 0.2);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 184, 0, 0.4);
+            background: var(--gold-light);
+        }
+
+        /* CARDS DE SERVICIO GLASSMORPHISM */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: left;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .service-card p {
+            color: #909090;
+            font-size: 0.95rem;
+        }
+
+        /* SECCIÓN EXTRA (LISTA) */
+        .premium-list {
+            background: linear-gradient(135deg, #0a0c0f 0%, #000 100%);
+            border-radius: 40px;
+            padding: 50px;
+            margin: 80px 0;
+            border: 1px solid var(--glass-border);
+        }
+
+        .list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            color: #d0d0d0;
+        }
+
+        .list-item i {
+            color: var(--gold);
+        }
+
+        /* WHATSAPP FLOTANTE ANIMADO */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            color: #fff;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            animation: pulse-wa 2s infinite;
+        }
+
+        @keyframes pulse-wa {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        footer {
+            padding: 80px 0 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/240555460213" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-crown"></i></div>
+                <div class="logo-text">
+                    <h2>FARAÓN</h2>
+                    <span>Digital Security</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="#contacto" class="btn-gold" style="padding: 10px 25px; font-size: 0.8rem;">CONTACTO 24/7</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="reveal-top">Protección Digital<br>con Poder Faraónico</h1>
+            <p class="reveal-bottom">Garantizamos la seguridad, velocidad y confianza de tu vida digital. Soporte técnico especializado para hogares y empresas en toda Guinea Ecuatorial.</p>
+            <div class="reveal-bottom">
+                <a href="https://wa.me/240555460213" class="btn-gold">
+                    <i class="fab fa-whatsapp"></i> HABLAR CON EL FARAÓN
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" id="servicios">
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Soporte Técnico</h3>
+                <p>Instalación de Windows 11, Office 365 y optimización avanzada de equipos lentos para un rendimiento máximo.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Redes & WiFi</h3>
+                <p>Eliminamos zonas muertas. Configuración de routers y repetidores para una cobertura total en toda tu casa.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Seguridad Pro</h3>
+                <p>Limpieza de virus, firewalls personalizados y protección de datos críticos contra cualquier amenaza digital.</p>
+            </div>
+        </div>
+
+        <div class="premium-list reveal-bottom">
+            <h2 style="color: var(--gold); margin-bottom: 20px;"><i class="fas fa-list-check"></i> Catálogo de Soluciones</h2>
+            <div class="list-grid">
+                <div class="list-item"><i class="fas fa-check"></i> Mejora de cobertura WiFi</div>
+                <div class="list-item"><i class="fas fa-check"></i> Configuración de Smart TVs</div>
+                <div class="list-item"><i class="fas fa-check"></i> Redes seguras para invitados</div>
+                <div class="list-item"><i class="fas fa-check"></i> Gestión de contraseñas</div>
+                <div class="list-item"><i class="fas fa-check"></i> Diagnóstico de latencia</div>
+                <div class="list-item"><i class="fas fa-check"></i> Asistencia Remota 24/7</div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacto">
+        <div class="container">
+            <h2 style="font-weight: 800; font-size: 2rem; margin-bottom: 10px;">Gumersindo Esono Ndong</h2>
+            <p style="color: var(--gold); letter-spacing: 2px; font-weight: 600;">SOPORTE IT & SEGURIDAD DIGITAL</p>
+            <div style="margin: 30px 0; font-size: 1.1rem; color: #a0a0a0;">
+                <p><i class="fas fa-phone"></i> +240 555 46 02 13</p>
+                <p><i class="fas fa-envelope"></i> gumersindoesonondongbella@gmail.com</p>
+            </div>
+            <p style="font-size: 0.8rem; color: #555;">&copy; 2026 Faraón Digital Security. Malabo, Guinea Ecuatorial.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Configuración de Animaciones
+        ScrollReveal().reveal('.reveal-top', { delay: 200, distance: '60px', origin: 'top' });
+        ScrollReveal().reveal('.reveal-bottom', { delay: 400, distance: '60px', origin: 'bottom' });
+        ScrollReveal().reveal('.service-card', { delay: 200, interval: 100, distance: '40px', origin: 'bottom' });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
