@@ -28,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Fondo Decorativo */
         body::before {
             content: '';
             position: fixed;
@@ -37,7 +36,6 @@
             z-index: -1;
         }
 
-        /* NAV */
         nav {
             display: flex;
             justify-content: space-between;
@@ -58,7 +56,7 @@
         }
 
         .logo-img {
-            height: 50px; /* Ajusta según prefieras */
+            height: 50px;
             width: auto;
             border-radius: 5px;
         }
@@ -90,7 +88,6 @@
             box-shadow: 0 10px 20px rgba(255, 184, 0, 0.2);
         }
 
-        /* HERO */
         .hero {
             text-align: center;
             padding: 100px 20px;
@@ -119,7 +116,6 @@
             font-size: 1.1rem; 
         }
 
-        /* SERVICIOS */
         .section-title {
             text-align: center;
             font-size: 2rem;
@@ -130,7 +126,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            padding: 0 5% 80px;
+            padding: 0 5% 40px;
         }
 
         .card {
@@ -159,7 +155,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
-        /* BENEFICIOS */
         .benefits {
             background: #111;
             padding: 60px 5%;
@@ -175,7 +170,6 @@
         .b-item i { color: var(--gold); font-size: 2rem; margin-bottom: 15px; }
         .b-item h4 { font-size: 1.2rem; margin-bottom: 10px; }
 
-        /* CTA */
         .cta {
             text-align: center;
             padding: 80px 20px;
@@ -187,7 +181,6 @@
             border: 1px solid rgba(255, 184, 0, 0.2);
         }
 
-        /* FOOTER */
         footer {
             padding: 60px 5%;
             border-top: 1px solid rgba(255,255,255,0.05);
@@ -196,9 +189,7 @@
         }
 
         .footer-content { opacity: 0.7; font-size: 0.9rem; }
-        .footer-content p { margin-bottom: 8px; }
 
-        /* WHATSAPP */
         .wa {
             position: fixed;
             bottom: 30px;
@@ -218,37 +209,31 @@
             z-index: 9999;
         }
 
-        .wa:hover { transform: scale(1.1) rotate(15deg); }
-
         @media (max-width: 768px) {
             .logo-text { font-size: 1rem; }
-            .logo-img { height: 40px; }
-            .hero h1 { font-size: 2.2rem; }
-            nav { padding: 10px 5%; }
             .btn-nav { display: none; }
         }
     </style>
 </head>
-
 <body>
 
-    <a href="https://wa.me/240555460213" class="wa" target="_blank" title="Chat de Soporte">
+    <a href="https://wa.me/240555460213" class="wa" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <nav>
-        <a href="#" class="logo-container">
-            <img src="FDS Logo.jpg" alt="Faraón Digital Security Logo" class="logo-img">
+        <a href="index.html" class="logo-container">
+            <img src="FDS Logo.jpg" alt="Logo" class="logo-img">
             <div class="logo-text">Faraón Digital Security</div>
         </a>
-        <a href="https://wa.me/240555460213" class="btn btn-nav">Contacto Directo</a>
+        <a href="servicios_faraon_digital.html" class="btn btn-nav">Ver Lista de Precios</a>
     </nav>
 
     <header class="hero">
         <h1>Soluciones IT de Élite en Malabo</h1>
         <p>Expertos en reparación de equipos, ciberseguridad y optimización de redes. En <strong>Faraón Digital Security</strong> protegemos tu vida digital.</p>
-        <a href="https://wa.me/240555460213" class="btn">
-            <i class="fas fa-screwdriver-wrench"></i> Solicitar Servicio Técnico
+        <a href="servicios_faraon_digital.html" class="btn">
+            <i class="fas fa-list-check"></i> Ver Servicios y Precios
         </a>
     </header>
 
@@ -259,60 +244,34 @@
             <h3>Hardware y Software</h3>
             <p>Reparación integral de ordenadores y servidores. Instalación de sistemas y recuperación de datos.</p>
         </div>
-
         <div class="card">
             <i class="fas fa-network-wired"></i>
             <h3>Infraestructura WiFi</h3>
-            <p>Instalación de redes de alta velocidad sin puntos ciegos para hogares y oficinas en toda la ciudad.</p>
+            <p>Instalación de redes de alta velocidad sin puntos ciegos para hogares y oficinas.</p>
         </div>
-
         <div class="card">
             <i class="fas fa-user-shield"></i>
             <h3>Seguridad Avanzada</h3>
-            <p>Blindaje contra virus, malware y auditorías de seguridad para prevenir accesos no autorizados.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-business-time"></i>
-            <h3>Soporte Empresas</h3>
-            <p>Mantenimiento preventivo mensual para asegurar que tu negocio nunca se detenga por fallos técnicos.</p>
+            <p>Blindaje contra virus, malware y auditorías de seguridad profesional.</p>
         </div>
     </section>
+
+    <div style="text-align: center; margin-bottom: 60px;">
+        <a href="servicios_faraon_digital.html" class="btn" style="background: transparent; border: 2px solid var(--gold); color: var(--gold);">
+            Ver todos los servicios y tarifas →
+        </a>
+    </div>
 
     <section class="benefits">
-        <div class="b-item">
-            <i class="fas fa-bolt"></i>
-            <h4>Respuesta Rápida</h4>
-            <p>Atención en Malabo.</p>
-        </div>
-        <div class="b-item">
-            <i class="fas fa-medal"></i>
-            <h4>Calidad Garantizada</h4>
-            <p>Técnicos certificados.</p>
-        </div>
-        <div class="b-item">
-            <i class="fas fa-lock"></i>
-            <h4>Privacidad Total</h4>
-            <p>Tus datos están seguros.</p>
-        </div>
-    </section>
-
-    <section class="cta">
-        <h2>¿Necesitas asistencia técnica inmediata?</h2>
-        <p style="color: #ccc; margin-bottom: 30px;">Hablamos por WhatsApp y resolvemos tus dudas en minutos.</p>
-        <a href="https://wa.me/240555460213" class="btn" style="padding: 20px 40px; font-size: 1.2rem;">
-            <i class="fab fa-whatsapp"></i> Chat Faraón Digital Security
-        </a>
+        <div class="b-item"><i class="fas fa-bolt"></i><h4>Respuesta Rápida</h4></div>
+        <div class="b-item"><i class="fas fa-medal"></i><h4>Calidad Garantizada</h4></div>
+        <div class="b-item"><i class="fas fa-lock"></i><h4>Privacidad Total</h4></div>
     </section>
 
     <footer>
         <div class="footer-content">
-            <img src="FDS Logo.jpg" alt="FDS Logo small" style="height: 60px; margin-bottom: 20px; filter: grayscale(0.5);">
             <p><strong>Gumersindo Esono Ndong</strong></p>
-            <p>Especialista en Soporte IT & Ciberseguridad</p>
-            <p><i class="fas fa-location-dot" style="color: var(--gold);"></i> Malabo, Guinea Ecuatorial</p>
-            <br>
-            <p>© 2026 Faraón Digital Security. Todos los derechos reservados.</p>
+            <p>© 2026 Faraón Digital Security. Malabo, Guinea Ecuatorial</p>
         </div>
     </footer>
 
