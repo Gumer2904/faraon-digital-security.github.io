@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Precios | Faraón Digital Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #ffb800;
+            --dark: #0a0b0e;
+            --card-bg: #16181d;
+            --text-gray: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: white;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 40px 5%;
+        }
+
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover { opacity: 0.7; transform: translateX(-5px); }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 184, 0, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+            color: #fff;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .price-tag {
+            margin-top: 20px;
+            background: rgba(255, 184, 0, 0.1);
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 1.4rem;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px dashed var(--gold);
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Volver a la página principal
+    </a>
+
+    <div class="header">
+        <h1>Tarifas de Servicios</h1>
+        <p style="color: var(--text-gray);">Faraón Digital Security - Malabo, Guinea Ecuatorial</p>
+    </div>
+
+    <div class="services-grid">
+        <div class="card">
+            <h3>Mantenimiento Físico</h3>
+            <p>Limpieza profunda de hardware, ventiladores y cambio de pasta térmica profesional.</p>
+            <div class="price-tag">10.000 FCFA</div>
+        </div>
+
+        <div class="card">
+            <h3>Formateo e Instalación</h3>
+            <p>Sistema Operativo Windows 10/11, Drivers, Antivirus y Paquete Office completo.</p>
+            <div class="price-tag">15.000 FCFA</div>
+        </div>
+
+        <div class="card">
+            <h3>Optimización WiFi</h3>
+            <p>Mejora de señal, configuración de seguridad y eliminación de zonas muertas.</p>
+            <div class="price-tag">20.000 FCFA</div>
+        </div>
+
+        <div class="card">
+            <h3>Activación Windows/Office</h3>
+            <p>Activación legal y permanente del sistema operativo y las herramientas de oficina.</p>
+            <div class="price-tag">8.000 FCFA</div>
+        </div>
+
+        <div class="card">
+            <h3>Seguridad y Antivirus</h3>
+            <p>Eliminación de virus, malware y configuración de escudo protector activo.</p>
+            <div class="price-tag">10.000 FCFA</div>
+        </div>
+
+        <div class="card">
+            <h3>Recuperación de Datos</h3>
+            <p>Rescate de información borrada o discos con errores (sujeto a diagnóstico).</p>
+            <div class="price-tag">Desde 30.000 FCFA</div>
+        </div>
+    </div>
+
+    <p class="footer-note">Precios vigentes para Malabo. Para servicios a domicilio puede aplicar un cargo extra.</p>
+
+</body>
+</html>
